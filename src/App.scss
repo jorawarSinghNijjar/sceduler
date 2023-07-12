@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.fixed-height-container {
+  width: 100%;
+  max-height: 600px;
+  overflow: auto;
+}
+
+.scheduler {
+  position: relative;
+  // background-color: blue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__days {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  &__day {
+    position: relative;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 7rem;
+  }
+
+  &__day-title {
+    position: fixed;
+    top: 0;
+    height: 7rem;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: white;
+  }
+
+  &__slot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    border-radius: 10px;
+    background-color: #eae4f5;
+    font-size: 1.1rem;
+
+    &:hover {
+      background-color: #772cf3;
+      color: white;
+      cursor: pointer;
+    }
+
+    // &.booked-by-other {
+    //   background-color: #fd4242;
+    //   color: black;
+    // }
+
+    &.booked{
+      background-color: #772cf3;
+      color: white;
+    }
+  }
+
+  //   &__grid {
+  //     width: 100%;
+  //     display: grid;
+  //     grid-template-columns: repeat(7, 10rem);
+  //     grid-template-rows: repeat(24, 1fr);
+  //     gap: 3rem;
+  //   }
+
+  //   &__days {
+  //     position: fixed;
+  //     top:0;
+  //     z-index: 10;
+  //     background-color: lightcoral;
+  //     display: flex;
+  //     flex-direction: row;
+  //     gap: 3rem;
+  //     margin-bottom: 2rem;
+  //   }
+
+  //   &__day {
+  //     width: 10rem;
+  //     height: 5rem;
+  //     background-color: lightsteelblue;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     font-size: 2rem;
+  //   }
+
+  //   &__slots {
+  //     font-size: 1.5rem;
+  //     padding: 1rem 0rem;
+  //     width: 100%;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     background-color: lightgreen;
+  //     border-radius: 8px;
+  //   }
+}
