@@ -8,12 +8,36 @@
   width: 100%;
   max-height: 600px;
   overflow: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+
+  .next-btn, .previous-btn{
+    position: fixed;
+    font-size: 4rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .next-btn{
+   right:2rem;
+  }
+
+  .previous-btn{
+    left:2rem;
+  }
 }
 
 .scheduler {
   position: relative;
   // background-color: blue;
-  width: 100%;
+  // width: 100%;
+  padding: 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,7 +92,7 @@
     //   color: black;
     // }
 
-    &.booked{
+    .booked{
       background-color: #772cf3;
       color: white;
     }

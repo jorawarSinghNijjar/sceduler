@@ -1,7 +1,10 @@
-import { calendar } from "../calendar/calendar";
+
+import { useContext } from "react";
+import { CalendarContext } from "../context/CalendarContext";
 import Slot from "./Slot";
 
 const Day = ({ dayData, index }) => {
+  const { calendar } = useContext(CalendarContext);
   const { className, date, hoursInDay, day, id, monthIndex, year } = dayData;
 
   return (

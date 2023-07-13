@@ -18,7 +18,9 @@ const Slot = ({ hourData, date, dayData }) => {
         bookedFor: "Abc",
         date: dayData.date,
       };
+      console.log("Adding booking...")
       addBooking(newBooking);
+      console.log(hourData)
     } else {
       console.log("deleting..")
       deleteBooking(hourData);

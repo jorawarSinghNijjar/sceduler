@@ -1,4 +1,5 @@
 const addBookingInState = (state, action) => {
+  console.log("Adding booking in state....");
   const updatedWeeks = state.calendar.weeks.map((week) =>
     week.map((day) => {
       if (day.date === action.payload.date) {
@@ -15,7 +16,7 @@ const addBookingInState = (state, action) => {
 };
 
 const deleteBookingInState = (state, action) => {
-  console.log("Deleting in state-------------------------");
+  console.log("Deleting booking in state....");
   const updatedWeeks = state.calendar.weeks.map((week) =>
     week.map((day) => {
       if (day.date === action.payload.date) {
